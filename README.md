@@ -21,6 +21,9 @@ Sum = A’B+AB’ =A ⊕ B Carry = AB
 ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
 
 Figure -01 HALF ADDER
+Half Adder Truth Table
+
+![Screenshot 2024-12-31 052548](https://github.com/user-attachments/assets/be6c54f1-3dd9-4b92-92bd-b0b8189c5321)
 
 **Half Subtractor**
 
@@ -32,10 +35,10 @@ Borrow = A’B
  ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
 
 Figure -02 HALF Subtractor
+ Half Subtractor Truth Table
+ 
+ ![Screenshot 2024-12-31 052920](https://github.com/user-attachments/assets/efaf54b1-0ab5-460a-8014-651f7d09ce2e)
 
-**Truthtable**
-![WhatsApp Image 2024-12-10 at 08 02 14_9ee078a0](https://github.com/user-attachments/assets/9a30cad6-c249-476e-88cb-ebfcc5621602)
-![WhatsApp Image 2024-12-10 at 08 02 15_8532843c](https://github.com/user-attachments/assets/c6c5fd5d-6e72-4580-b881-b22a8b7eee3e)
 
 
 **Procedure**
@@ -55,17 +58,42 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by: RegisterNumber:*/24900725
 
+ Half Adder
+  module ha(a,b,sum,carry);
+ input a,b;
+ output sum,carry;
+ assign sum=(a^b);
+ assign carry=(a&b);
+ endmodule
+
+ Half Subtractor
+  module hs(a,b,diff,borr);
+ input a,b;
+ output diff,borr;
+ assign diff=(a^b);
+ assign borr=(~a&b);
+ endmodule
+ 
 **RTL Schematic**
-![WhatsApp Image 2024-12-08 at 14 33 16_6e306b46](https://github.com/user-attachments/assets/7742db69-7945-462e-8240-cea9c8fce933)
-![WhatsApp Image 2024-12-08 at 14 33 17_638633b2](https://github.com/user-attachments/assets/bc768559-1177-4fc3-a867-5999853a8d56)
+Half adder
 
+![Screenshot 2024-12-31 053352](https://github.com/user-attachments/assets/3af032cc-e081-47d6-9020-4bc4a6eb1ebf)
 
-**Output/TIMING Waveform**
-![WhatsApp Image 2024-12-08 at 14 33 17_ca10a6e2](https://github.com/user-attachments/assets/abbb8025-bf6d-4a2e-8d93-ea9ce01bb08f)
-![WhatsApp Image 2024-12-08 at 14 33 17_1df4cbb9](https://github.com/user-attachments/assets/4794b974-afc0-42ac-887c-254296e4d06e)
+Half Subtractor
 
+![Screenshot 2024-12-31 053449](https://github.com/user-attachments/assets/91ec4d58-a80c-4f81-b41b-771d831b4794)
+
+**Output**
+
+Half Adder
+
+![Screenshot 2024-12-31 053549](https://github.com/user-attachments/assets/2b3d3193-bf3b-42cd-9654-af83860cfdd2)
+
+Half Subtractor
+
+![Screenshot 2024-12-31 053655](https://github.com/user-attachments/assets/8922bd1e-465b-419f-b8df-fd476d50fdfd)
 
 **Result:**
 hence the programm for half adder and half subtractor nd verification of its truth table in quartus using verilog programming is verified
