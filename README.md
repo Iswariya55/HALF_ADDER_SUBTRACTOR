@@ -61,20 +61,14 @@ Figure -02 HALF Subtractor
 Developed by: RegisterNumber:*/24900725
 
  Half Adder
-  module ha(a,b,sum,carry);
- input a,b;
- output sum,carry;
- assign sum=(a^b);
- assign carry=(a&b);
- endmodule
+
+  ![Screenshot 2025-01-02 165800](https://github.com/user-attachments/assets/849ebb48-c88c-4a15-9ff4-b66bc3b9d50c)
+
 
  Half Subtractor
-  module hs(a,b,diff,borr);
- input a,b;
- output diff,borr;
- assign diff=(a^b);
- assign borr=(~a&b);
- endmodule
+
+ ![Screenshot 2025-01-02 165812](https://github.com/user-attachments/assets/b5555304-b2df-407d-bcac-8ab3e56b8902)
+
  
 **RTL Schematic**
 Half adder
